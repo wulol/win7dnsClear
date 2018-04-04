@@ -1,0 +1,70 @@
+@echo off
+  echo ---------------------------------------------------------------
+  echo +                                                             +
+  echo    前几天，线路很好，外网上却上不去，原来是本机的DNS毛病    
+  echo    所以，做为菜鸟，整理了前辈的经验，复制代码保存成 BAT 使用  
+  echo +                                                             +
+  echo          温馨提示-本程序并不会造成致命操作 
+  echo +
+  echo      
+  echo  --------------------------------------------------------------                            
+  pause
+  
+  ipconfig /displaydns
+  echo +
+  echo +             以上信息是 目前 系统DNS缓存记录 
+  echo +---------------------------------------------------------------
+  echo +
+  echo +            +-------------------------------------+
+  echo +                  继续操作将清理 系统DNS缓存..
+  echo +            +-------------------------------------+
+  echo +
+  echo +
+  echo +
+  pause
+  start ipconfig /flushdns
+  ipconfig /displaydns
+  
+  
+  echo +
+  echo +
+  echo   +----------------------------------------------------------------------+  
+  echo       系统DNS缓存已清理，如果提示失败请右键管理员，下面操作chrome浏览器 
+  echo   +----------------------------------------------------------------------+
+  echo +                                  
+  echo +                                 
+  echo +                                   
+  echo +
+  echo +
+  echo +
+  echo +  
+  pause 
+  echo ----------------------------------------------------------------
+  echo  -- 别着急，提示  右键-[标记] 可以复制----把浏览器缩小放右侧 -- 
+  echo ----------------------------------------------------------------
+  pause
+  echo    总计  3  步  ，适用于DNS 本地  污染
+  echo ------------------------------------------------------------------
+  echo .                                                                 .
+  echo .  (1)  复制   chrome://net-internals/#dns         到chrom 地址栏 .   
+  echo .                                                                 . 
+  echo .           A  点击  [Clear host cache]                           .
+  echo .                                                                 .
+  echo .  (2)  复制   chrome://net-internals/#sockets     到chrom 地址栏 .
+  echo .                                                                 .
+  echo .             B      点击  [Clear idle sockets]                   .
+  echo .                                                                 .
+  echo .              C   再点击  [Flush socket pools]                   .
+  echo .                                                                 .
+  echo .  (3)  复制  chrome://settings/clearBrowserData   到chrom 地址栏 .
+  echo .                                                                 .
+  echo .                  D     选择   [浏览记录]  +  [缓存的图片和文件] .
+  echo .                                                                 .     
+  echo .                        点击  [清除浏览缓存]                     .
+  echo .                                                                 .  
+  echo -------------------------------完---------------------------------
+  
+  pause 
+  
+  
+  
